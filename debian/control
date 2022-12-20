@@ -1,0 +1,67 @@
+Source: libvisio
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+Build-Depends: autotools-dev,
+               dh-autoreconf,
+               debhelper (>= 10),
+               doxygen,
+               dpkg-dev (>= 1.17.14),
+               gperf,
+               libboost-dev,
+               libcppunit-dev,
+               libicu-dev,
+               librevenge-dev,
+               libxml2-dev (>= 2.9.2+zdfsg1-4),
+               pkg-config,
+               tzdata <!nocheck>,
+               zlib1g-dev
+Standards-Version: 3.9.4
+Section: libs
+Homepage: http://freedesktop.org/wiki/Software/libvisio
+
+Package: libvisio-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libvisio-0.1-1 (= ${binary:Version}),
+         librevenge-dev,
+         libicu-dev,
+         libxml2-dev,
+         zlib1g-dev,
+         ${misc:Depends}
+Description: library for parsing the visio file structure -- development
+ Libvisio is library providing ability to interpret and import visio
+ diagrams into various applications.
+ .
+ This package contains the development files (headers, ...)
+
+Package: libvisio-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: library for parsing the visio file structure -- documentatio
+ Libvisio is library providing ability to interpret and import visio
+ diagrams into various applications.
+ .
+ This package contains the documentation
+
+Package: libvisio-0.1-1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libvisio-tools (<< 0.0.15~)
+Description: library for parsing the visio file structure
+ Libvisio is library providing ability to interpret and import visio
+ diagrams into various applications.
+
+Package: libvisio-tools
+Section: utils
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library for parsing the visio file structure -- tools
+ Libvisio is library providing ability to interpret and import visio
+ diagrams into various applications.
+ .
+ This package contains vsd2xhtml and vsd2raw.

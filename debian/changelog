@@ -1,0 +1,11 @@
+libvisio (0.1.7-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:00:20 +0800
+
+libvisio (0.1.7-deepin) stable; urgency=medium
+
+  * ['Rebuild  against by  current gcc 11.2']
+
+ -- Deepin Packages Builder <packages@deepin.org>  Thu, 18 Aug 2022 16:27:07 +0800
